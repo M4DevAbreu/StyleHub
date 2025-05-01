@@ -9,7 +9,9 @@ body {
     padding: 1rem;
     color: white;
   }
-  
+  .nav-link {
+    color: #ffffff !important;
+  }
   .notification-item {
     margin-bottom: 1.5rem;
     cursor: pointer;
