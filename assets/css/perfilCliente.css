@@ -15,7 +15,16 @@ body {
     gap: 1.5rem; 
     max-width: 500px;
     margin: 0 auto;
+    flex-wrap: wrap
   }
+
+  @media (max-width: 576px) {
+    .user-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+  
   
   .user-info-box {
     text-align: center;
