@@ -1,4 +1,3 @@
-
 const calendarDays = document.getElementById('calendar-days');
 const dataSpan = document.getElementById('dataSelecionada');
 const horariosDiv = document.getElementById('horarios');
@@ -54,24 +53,8 @@ function mostrarHorarios() {
     btn.textContent = horario;
 
     btn.onclick = () => {
-      const servicosSelecionados = Array.from(document.querySelectorAll('.servico-checkbox:checked'))
-        .map(cb => cb.value);
-
-      if (servicosSelecionados.length === 0) {
-        alert("Por favor, selecione ao menos um serviço.");
-        return;
-      }
-
-      const dataSelecionada = dataSpan.textContent;
-      const agendamento = {
-        data: dataSelecionada,
-        horario: horario,
-        servicos: servicosSelecionados
-      };
-
-      alert(`✅ Agendamento realizado:\n📅 ${agendamento.data}\n🕒 ${agendamento.horario}\n💇 Serviços: ${agendamento.servicos.join(', ')}`);
-
-      console.log("Agendamento:", agendamento);
+      document.querySelectorAll('.horario-btn').forEach(b => b.classList.remove('selected-horario'));
+      btn.classList.add('selected-horario');
     };
 
     container.appendChild(btn);
@@ -80,22 +63,83 @@ function mostrarHorarios() {
   horariosDiv.classList.remove('d-none');
 }
 
-document.querySelector('#prev-month').onclick = () => {
+document.getElementById('prev-month').addEventListener('click', () => {
   mes--;
   if (mes < 0) {
     mes = 11;
     ano--;
   }
   gerarCalendario();
-};
+});
 
-document.querySelector('#next-month').onclick = () => {
+document.getElementById('next-month').addEventListener('click', () => {
   mes++;
   if (mes > 11) {
     mes = 0;
     ano++;
   }
   gerarCalendario();
-};
+});
 
 gerarCalendario();
+
+// Atualiza o valor total
+const servicoCheckboxes = document.querySelectorAll('.servico-checkbox');
+const valorTotalSpan = document.getElementById('valor-total');
+const agendarBtn = document.getElementById('agendar-btn');
+
+function calcularValorTotal() {
+  let total = 0;
+  servicoCheckboxes.forEach(checkbox => {
+    if (checkbox.checked) {
+      total += parseFloat(checkbox.getAttribute('data-preco'));
+    }
+  });
+  valorTotalSpan.textContent = `R$ ${total.toFixed(2)}`;
+}
+
+servicoCheckboxes.forEach(checkbox => {
+  checkbox.addEventListener('change', calcularValorTotal);
+});
+
+// Função de Agendamento
+agendarBtn.onclick = () => {
+  const servicosSelecionados = Array.from(document.querySelectorAll('.servico-checkbox:checked'))
+    .map(cb => cb.value);
+
+  const horarioSelecionadoBtn = document.querySelector('.horario-btn.selected-horario');
+  const horarioSelecionado = horarioSelecionadoBtn ? horarioSelecionadoBtn.textContent : null;
+
+  if (servicosSelecionados.length === 0) {
+    alert("Por favor, selecione ao menos um serviço.");
+    return;
+  }
+
+  if (!horarioSelecionado) {
+    alert("Por favor, selecione um horário.");
+    return;
+  }
+
+  const agendamento = {
+    data: dataSpan.textContent,
+    horario: horarioSelecionado,
+    servicos: servicosSelecionados,
+    valorTotal: valorTotalSpan.textContent,
+    comentario: document.getElementById("comentarios").value
+  };
+
+  const modalBody = document.getElementById('modal-body-confirmacao');
+  modalBody.innerHTML = `
+    <p><strong>Data:</strong> ${agendamento.data}</p>
+    <p><strong>Horário:</strong> ${agendamento.horario}</p>
+    <p><strong>Serviços:</strong> ${agendamento.servicos.join(', ')}</p>
+    <p><strong>Valor Total:</strong> ${agendamento.valorTotal}</p>
+    <p><strong>Comentários:</strong> ${agendamento.comentario}</p>
+  `;
+
+  var myModal = new bootstrap.Modal(document.getElementById('modalConfirmacao'));
+  myModal.show();
+};
+
+// Inicializa com o valor total
+calcularValorTotal();
