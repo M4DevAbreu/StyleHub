@@ -50,6 +50,23 @@
   letter-spacing: -.05rem;
 }
 
+.titulo{
+  padding-top: 250px;
+  color: #00c781;
+  font-family: bebas;
+  font-size: 90px;
+}
+
+.subtitulo{
+  font-family: regular brush;
+  font-size: 60px;
+}
+
+.conhecendo{
+  color: #00c781;
+  
+}
+
 /* rtl:end:remove */
 
 /* RESPONSIVE CSS
