@@ -41,6 +41,7 @@
     </header>
 
     <!-- Calendário e Horários -->
+     <p>Tudo beleza, Pedro!</p>
     <div class="container py-4 d-flex flex-column flex-md-row justify-content-between">
         <div id="calendar" class="mb-4 flex-grow-1">
             <div class="calendar-header">
@@ -69,24 +70,40 @@
             <div class="col-md-8">
                 <div id="servicos-lista" class="d-flex flex-wrap gap-3 justify-content-center">
                     <div class="icon-servico" data-tipo="cabelo">
-                        <input type="checkbox" class="servico-checkbox" value="Corte de Cabelo"> Corte de Cabelo
+                        <input type="checkbox" class="servico-checkbox" value="Corte de Cabelo" data-preco="50.00"> Corte de Cabelo
+                        <span class="valor-servico">R$ 50,00</span>
                     </div>
                     <div class="icon-servico" data-tipo="coloracao">
-                        <input type="checkbox" class="servico-checkbox" value="Coloração"> Coloração
+                        <input type="checkbox" class="servico-checkbox" value="Coloração" data-preco="120.00"> Coloração
+                        <span class="valor-servico">R$ 120,00</span>
                     </div>
                     <div class="icon-servico" data-tipo="barba">
-                        <input type="checkbox" class="servico-checkbox" value="Barbearia"> Barbearia
+                        <input type="checkbox" class="servico-checkbox" value="Barbearia" data-preco="40.00"> Barbearia
+                        <span class="valor-servico">R$ 40,00</span>
                     </div>
                     <div class="icon-servico" data-tipo="maos">
-                        <input type="checkbox" class="servico-checkbox" value="Manicure"> Manicure
+                        <input type="checkbox" class="servico-checkbox" value="Manicure" data-preco="30.00"> Manicure
+                        <span class="valor-servico">R$ 30,00</span>
                     </div>
                     <div class="icon-servico" data-tipo="pes">
-                        <input type="checkbox" class="servico-checkbox" value="Pedicure"> Pedicure
+                        <input type="checkbox" class="servico-checkbox" value="Pedicure" data-preco="40.00"> Pedicure
+                        <span class="valor-servico">R$ 40,00</span>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- Campo de Comentário -->
+        <div class="mt-4">
+            <label for="comentarios" class="form-label text-white">Comentários ou especificações sobre o serviço:</label>
+            <textarea id="comentarios" class="form-control" rows="4"></textarea>
+        </div>
     </section>
+
+    <!-- Valor Total e Botão de Agendar -->
+    <div class="container text-center mt-4">
+        <p><strong>Valor Total:</strong> <span id="valor-total">R$ 0,00</span></p>
+        <button id="agendar-btn" class="btn btn-stylehub">Confirmar Agendamento</button>
+    </div>
 
     <!-- Rodapé -->
     <footer class="py-3 my-4">
@@ -99,6 +116,24 @@
         </ul>
         <p class="text-center text-white">&copy; 2025 StyleHub, Inc</p>
     </footer>
+
+    <!-- Modal de Confirmação -->
+    <div class="modal fade" id="modalConfirmacao" tabindex="-1" aria-labelledby="modalConfirmacaoLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalConfirmacaoLabel">Agendamento Realizado</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="modal-body-confirmacao">
+                    Seu agendamento foi realizado com sucesso!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="./../assets/js/calendario.js"></script>
     <script src="./../assets/js/script.js"></script>
