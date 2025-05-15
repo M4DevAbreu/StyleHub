@@ -4,7 +4,7 @@ const themeIcon = document.getElementById('themeIcon');
 let temaAtual = localStorage.getItem('tema') || 'escuro';
 
 function aplicarTema(tema) {
-  const htmlEl = document.documentElement; // <html>
+  const htmlEl = document.documentElement; 
 
   if (tema === 'claro') {
     htmlEl.setAttribute('data-bs-theme', 'light');
