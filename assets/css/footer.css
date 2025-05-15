@@ -1,6 +1,6 @@
 footer {
-    background-color: #000000;
-    color: white;
+    background-color: #000000; /* Fundo preto */
+    color: #ffffff !important; /* Força o texto branco */
     width: 100%;
     bottom: 0;
     left: 0;
@@ -10,17 +10,21 @@ footer {
     z-index: 1000;
 }
 
-footer p {
-    padding: 0;
-    margin: 0.5rem 0;
+/* Garante que todos os textos, incluindo parágrafos, herdem a cor branca */
+footer p,
+footer span,
+footer div,
+footer a {
+    color: #ffffff !important;
 }
+
 .links {
-    color: white;
+    color: #00E997 !important; /* Links verdes para visibilidade */
     transition: color 0.3s ease;
 }
 
 .links:hover {
-    color: #00E997;
+    color: #ffffff !important; /* Branco no hover */
 }
 
 .lista {
@@ -30,6 +34,3 @@ footer p {
     padding: 0;
     margin: 0.5rem 0;
 }
-
-
-

@@ -1,95 +1,83 @@
-/* Calendário */
 #calendar {
-    max-width: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #000000;
-    padding: 15px;
-    border-radius: 10px;
-    color: white;
-    text-align: center;
-    box-sizing: border-box;
+  width: 100%;
+  background-color: #000000;
+  padding: 15px;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  box-sizing: border-box;
 }
 
-/* Cabeçalho do calendário */
-#calendar .calendar-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 18px;
-    font-weight: 600;
-    padding: 5px;
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 5px;
 }
 
-/* Navegação do mês */
-#calendar .month-picker-nav {
-    display: flex;
-    align-items: center;
+.month-picker-nav {
+  display: flex;
+  align-items: center;
 }
 
-#calendar .month-change {
-    cursor: pointer;
-    padding: 5px;
+.month-change {
+  cursor: pointer;
+  padding: 5px;
 }
 
-/* Grade de dias */
-#calendar-days {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 10px;
-    background-color: #020202;
-    padding: 10px;
-    border-radius: 10px;
+.calendar-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 5px;
 }
 
-#calendar-days div.day {
-    cursor: pointer;
-    padding: 10px;
-    background-color: #000000;
-    border-radius: 5px;
-    font-size: 16px;
+.calendar-body {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  background-color: #020202;
+  padding: 10px;
+  border-radius: 10px;
 }
 
-#calendar-days div.day:hover {
-    background-color: #00cc99;
-    color: #000;
+.calendar-body div.day {
+  cursor: pointer;
+  padding: 10px;
+  background-color: #000000;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.calendar-body div.day:hover {
+  background-color: #00cc99;
+  color: #000;
 }
 
 .selected {
-    background-color: #00cc99 !important;
-    color: #000 !important;
+  background-color: #00cc99 !important;
+  color: #000 !important;
 }
 
-/* Botões de horários */
 .horario-btn {
-    background-color: #00cc99;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    color: #000;
-    font-weight: bold;
-}
-
-/* Esconde os horários até a seleção */
-.d-none {
-    display: none;
-}
-
-/* Modal de confirmação */
-#modal-body-confirmacao {
-    font-size: 16px;
-    font-weight: bold;
+  background-color: #00cc99;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  color: #000;
+  font-weight: bold;
 }
 
 .selected-horario {
-    background-color: #009973;
-    color: #fff;
+  background-color: #009973;
+  color: #fff;
 }
 
 .valor-servico {
-    display: block;
-    font-size: 14px;
-    color: #00cc99;
+  display: block;
+  font-size: 14px;
+  color: #00cc99;
 }
