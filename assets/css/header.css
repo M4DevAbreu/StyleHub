@@ -63,6 +63,11 @@
     width: auto !important; /* Largura ajustada automaticamente no desktop */
     
   }
+
+  a{
+    margin-right: 2rem;
+
+  }
 }
 
 /* No mobile, diminui o espaço vertical entre os itens do menu */
