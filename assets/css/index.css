@@ -76,6 +76,14 @@
   color: #00c781;
 }
 
+[data-bs-theme="dark"] .locContato a {
+  color: white !important;
+}
+
+[data-bs-theme="dark"] .locContato a:hover {
+  color: #00c781 !important;
+}
+
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 

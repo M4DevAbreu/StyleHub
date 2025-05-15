@@ -23,7 +23,7 @@
 
 /* Estilo para o hover dos links */
 .nav-link:hover {
-  color: #ffffff !important; /* Cor branca ao passar o mouse */
+  color: #00E997 !important; /* Cor branca ao passar o mouse */
   text-decoration: underline; /* Sublinha no hover */
 }
 
@@ -40,7 +40,7 @@
 
 .btn-stylehub:hover {
   background-color: #000 !important; /* Cor de fundo no hover */
-  color: #000000 !important; /* Cor do texto no hover */
+  color: #00E997 !important; /* Cor do texto no hover */
 }
 
 /* Flexbox: no mobile, os botões ocupam a largura total */
