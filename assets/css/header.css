@@ -50,12 +50,17 @@
   }
 }
 
+  .li > a {
+    margin-right: 2rem;
+  }
+
+
 /* No desktop, os botões ficam lado a lado */
 @media (min-width: 576px) {
   .btn-stylehub {
     width: auto !important; /* Largura ajustada automaticamente no desktop */
   }
-  .li > a {
+  .links a {
     margin-right: 2rem;
   }
 
