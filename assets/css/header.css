@@ -64,6 +64,11 @@
   a {
     margin-right: 2rem;
   }
+
+  a{
+    margin-right: 2rem;
+
+  }
 }
 
 /* No mobile, diminui o espaço vertical entre os itens do menu */
