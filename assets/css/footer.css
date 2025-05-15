@@ -1,11 +1,11 @@
-/* Reset de margens e altura total da página */
+/* Reset básico */
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
 }
 
-/* Permite que o conteúdo empurre o footer para o fim */
+/* Estrutura principal da página */
 body {
   display: flex;
   flex-direction: column;
@@ -15,98 +15,65 @@ main {
   flex: 1;
 }
 
-/* Estilização do footer */
-footer {
-  background: #1e1e1e;
+/* Footer base */
+.footer {
+  background-color: var(--footer-bg, #1e1e1e);
   color: white;
-  padding: 2rem 0 1rem;
   font-size: 0.9rem;
-  margin-bottom: 0;
 }
 
-footer p {
-  margin: 0;
-}
-
-footer a {
+.footer a {
   color: white;
   text-decoration: none;
 }
 
-footer a:hover {
+.footer a:hover {
   text-decoration: underline;
   color: white;
 }
 
-/* Centralização geral */
-.wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 /* Lista de links */
-ul.lista {
+.lista {
   list-style: none;
   padding: 0;
-  margin: 0 0 1rem 0;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem;
+  margin: 0;
 }
 
 .lista a {
   font-weight: 500;
-  padding: 0 1rem;
-  color: white;
-}
-
-.lista a:hover {
-  color: white;
-  text-decoration: underline;
 }
 
 /* Linha divisória */
 .footer-divider {
   width: 100%;
-  border-top: 1px solid #000000;
-  margin: 1rem 0;
-}
-
-/* Responsividade */
-@media (max-width: 600px) {
-  .lista {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .lista a {
-    padding: 0.5rem 0;
-  }
+  border-top: 1px solid #444;
+  margin: 2rem 0;
 }
 
 /* Tema escuro */
-[data-bs-theme="dark"] footer {
-  background: #0c0c0c;
+[data-bs-theme="dark"] .footer {
+  background-color: #0c0c0c;
   color: white;
 }
 
-[data-bs-theme="dark"] footer a,
-[data-bs-theme="dark"] footer a:hover {
+[data-bs-theme="dark"] .footer a {
   color: white !important;
 }
 
-/* Tema claro (mantendo fundo escuro, opcional) */
-[data-bs-theme="light"] footer {
-  background: #0c0c0c;
-  color: white;
+/* Tema claro */
+[data-bs-theme="light"] .footer {
+  background-color: #f8f9fa;
+  color: #000;
 }
 
-[data-bs-theme="light"] footer a,
-[data-bs-theme="light"] footer a:hover {
-  color: white !important;
+[data-bs-theme="light"] .footer a {
+  color: #000 !important;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .lista {
+    flex-direction: column !important;
+    align-items: center;
+  }
 }
