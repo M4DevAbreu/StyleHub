@@ -86,15 +86,17 @@
 
 /* Estiliza o botão hamburger */
 .navbar-toggler {
-  border: none !important; /* Remove a borda do botão hamburger */
-  background-color: #000000 !important; /* Fundo preto */
+  background-color: #ffffff !important; /* Fundo preto */
 }
+
 
 /* Estiliza o ícone de três linhas para ficarem verdes */
 .navbar-toggler-icon {
-  background-color: #000000 !important; /* Cor verde para as linhas */
+  background-color: #ffffff !important; /* Cor verde para as linhas */
   border-radius: 2px !important; /* Borda suave para o ícone */
 }
+
+
 
 /* Remove a animação de foco e de ativação */
 .navbar-toggler:focus {
@@ -108,3 +110,4 @@
   display: flex;
   color: #000000; /* Links verdes para visibilidade */
 }
+
