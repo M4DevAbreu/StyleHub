@@ -63,73 +63,76 @@
           </div>
         </nav>
       </header>
-
-  <div class="container">
-    <div class="form-container mx-auto my-5 p-4 shadow-sm rounded bg-white">
-      <h2 class="form-title text-center mb-4">Criar uma nova conta</h2>
-      <form>
-        <div class="row mb-3">
-          <div class="col-sm-12 col-md-6 mb-2 mb-md-0">
-            <input type="text" class="form-control" placeholder="Nome">
-          </div>
-          <div class="col-sm-12 col-md-6">
-            <input type="text" class="form-control" placeholder="Sobrenome">
-          </div>
+      
+  <div class="container shadow">
+    <main>
+      <div class="container">
+        <div class="form-container mx-auto my-5 p-4 shadow-sm rounded bg-white">
+          <h2 class="form-title text-center mb-4">Criar uma nova conta</h2>
+          <form>
+            <div class="row mb-3">
+              <div class="col-sm-12 col-md-6 mb-2 mb-md-0">
+                <input type="text" class="form-control" placeholder="Nome">
+              </div>
+              <div class="col-sm-12 col-md-6">
+                <input type="text" class="form-control" placeholder="Sobrenome">
+              </div>
+            </div>
+            <div class="mb-3">
+              <input type="text" class="form-control" placeholder="CPF">
+            </div>
+            <div class="mb-3">
+              <input type="email" class="form-control" placeholder="Email">
+            </div>
+            <div class="mb-3">
+              <input type="tel" class="form-control" placeholder="Telefone">
+            </div>
+            <div class="mb-3">
+              <input type="text" class="form-control" placeholder="Endereço">
+            </div>
+            <div class="mb-3">
+              <input type="password" class="form-control" placeholder="Senha">
+            </div>
+            <div class="mb-3">
+              <label class="form-label d-block">Gênero</label>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="genero" id="feminino" value="Feminino">
+                <label class="form-check-label" for="feminino">Feminino</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="genero" id="masculino" value="Masculino">
+                <label class="form-check-label" for="masculino">Masculino</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="genero" id="personalizado" value="Personalizado">
+                <label class="form-check-label" for="personalizado">Personalizado</label>
+              </div>
+            </div>
+            <div class="d-grid">
+             <button type="button" class="btn btn-success" onclick="window.location.href='paginainicial.html'">Cadastre-se</button>
+            </div>
+            <div class="mt-3 text-center">
+              <small>Já tem uma conta? <a href="./login.html">Faça login</a></small>
+            </div>
+          </form>
         </div>
-        <div class="mb-3">
-          <input type="text" class="form-control" placeholder="CPF">
-        </div>
-        <div class="mb-3">
-          <input type="email" class="form-control" placeholder="Email">
-        </div>
-        <div class="mb-3">
-          <input type="tel" class="form-control" placeholder="Telefone">
-        </div>
-        <div class="mb-3">
-          <input type="text" class="form-control" placeholder="Endereço">
-        </div>
-        <div class="mb-3">
-          <input type="password" class="form-control" placeholder="Senha">
-        </div>
-        <div class="mb-3">
-          <label class="form-label d-block">Gênero</label>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="genero" id="feminino" value="Feminino">
-            <label class="form-check-label" for="feminino">Feminino</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="genero" id="masculino" value="Masculino">
-            <label class="form-check-label" for="masculino">Masculino</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="genero" id="personalizado" value="Personalizado">
-            <label class="form-check-label" for="personalizado">Personalizado</label>
-          </div>
-        </div>
-        <div class="d-grid">
-         <button type="button" class="btn btn-success" onclick="window.location.href='paginainicial.html'">Cadastre-se</button>
-
-        </div>
-        <div class="mt-3 text-center">
-          <small>Já tem uma conta? <a href="./login.html">Faça login</a></small>
-        </div>
-      </form>
-    </div>
-  </div>
-      <div>
-        <footer class="footer mt-auto py-3">
-          <div class="container text-center">
-            <ul class="lista d-flex justify-content-center flex-wrap gap-3 mb-3">
-              <li><a href="#" class=" px-2 links">Início</a></li>
-              <li><a href="#" class=" px-2 links">Serviços</a></li>
-              <li><a href="#" class=" px-2 links">Contatos</a></li>
-              <li><a href="#" class=" px-2 links">Sobre</a></li>
-            </ul>
-            <div class="footer-divider"></div>
-            <p class="mb-0">&copy; 2025 StyleHub, Inc</p>
-          </div>
-        </footer>
       </div>
-      <script src="./../assets/js/mododark.js"></script>
+          <div>
+            <footer class="footer mt-auto py-3">
+              <div class="container text-center">
+                <ul class="lista d-flex justify-content-center flex-wrap gap-3 mb-3">
+                  <li><a href="#" class=" px-2 links">Início</a></li>
+                  <li><a href="#" class=" px-2 links">Serviços</a></li>
+                  <li><a href="#" class=" px-2 links">Contatos</a></li>
+                  <li><a href="#" class=" px-2 links">Sobre</a></li>
+                </ul>
+                <div class="footer-divider"></div>
+                <p class="mb-0">&copy; 2025 StyleHub, Inc</p>
+              </div>
+            </footer>
+          </div>
+          <script src="./../assets/js/mododark.js"></script>
+    </main>
+  </div>
 </body>
 </html>

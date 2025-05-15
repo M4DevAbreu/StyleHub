@@ -37,7 +37,7 @@
 .calendar-body {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  gap: 10px;
+  gap: 6px;
   background-color: #020202;
   padding: 10px;
   border-radius: 10px;

@@ -15,7 +15,7 @@
 </head>
 <body>
     <!-- Cabeçalho -->
-     <header>
+     <header id="inicio">
         <nav class="navbar bg-white navbar-expand-sm">
           <div class="container">
             <!-- Logo -->
@@ -42,10 +42,10 @@
             <div class="collapse navbar-collapse" id="menuNavbar">
               <div class="navbar-nav ms-auto text-center text-sm-start">
                 <div class="links">
-                  <a href="#" class="nav-link active">Início</a>
-                  <a href="#" class="nav-link">Serviços</a>
-                  <a href="#" class="nav-link">Contatos</a>
-                  <a href="#" class="nav-link">Sobre</a>
+                  <a href="/pages/notificacoes.html" class="nav-link active">Notificações</a>
+                  <a href="/pages/seusCortesAgendados.html" class="nav-link">Agendamentos</a>
+                  <a href="/pages/historicoDeCorte.html" class="nav-link">Histórico</a>
+                  <a href="/pages/perfilCliente.html" class="nav-link">Perfil</a>
                 </div>
                 <button id="toggleThemeBtn" class="btn btn-outline-dark ms-3" title="Alternar tema">
                  <span id="themeIcon">Tema</span>
@@ -63,118 +63,122 @@
           </div>
         </nav>
       </header>
-
-  <!-- Saudação -->
-  <p id="saudacao" class="texto-tema-adaptavel text-center mt-3">Tudo beleza, Pedro!</p>
-
-  <!-- Calendário e Horários -->
-  <div class="container py-4 d-flex flex-column flex-md-row justify-content-between">
-      <div id="calendar" class="mb-4 flex-grow-1">
-          <div class="calendar-header">
-              <span id="month-picker">Janeiro</span>
-              <div class="month-picker-nav">
-                  <span class="month-change" id="prev-month"><pre><</pre></span>
-                  <span id="year">2025</span>
-                  <span class="month-change" id="next-month"><pre>></pre></span>
+<div class="container shadow">
+  <main>
+  
+      <!-- Saudação -->
+      <p id="saudacao" class="texto-tema-adaptavel text-center mt-3">Tudo beleza, Pedro!</p>
+  
+      <!-- Calendário e Horários -->
+      <div class="container py-4 d-flex flex-column flex-md-row justify-content-between">
+          <div id="calendar" class="mb-4 flex-grow-1">
+              <div class="calendar-header">
+                  <span id="month-picker">Janeiro</span>
+                  <div class="month-picker-nav">
+                      <span class="month-change" id="prev-month"><pre><</pre></span>
+                      <span id="year">2025</span>
+                      <span class="month-change" id="next-month"><pre>></pre></span>
+                  </div>
               </div>
+              <div id="day-labels" class="calendar-weekdays">
+                  <div>Dom</div><div>Seg</div><div>Ter</div><div>Qua</div><div>Qui</div><div>Sex</div><div>Sáb</div>
+              </div>
+              <div id="calendar-days" class="calendar-body"></div>
           </div>
-          <div id="day-labels" class="calendar-weekdays">
-              <div>Dom</div><div>Seg</div><div>Ter</div><div>Qua</div><div>Qui</div><div>Sex</div><div>Sáb</div>
-          </div>
-          <div id="calendar-days" class="calendar-body"></div>
-      </div>
-
-      <div
-        id="horarios"
-        class="d-none flex-column align-items-start ms-md-4 mt-4 mt-md-0"
-        style="max-width: 300px; overflow-y: auto"
-      >
-          <h5 id="horariosTitulo" class="texto-tema-adaptavel mt-3"
-            >Horários disponíveis em <span id="dataSelecionada"></span>:</h5
+  
+          <div
+            id="horarios"
+            class="d-none flex-column align-items-start ms-md-4 mt-4 mt-md-0"
+            style="max-width: 300px; overflow-y: auto"
           >
-          <div class="d-flex flex-column gap-2 mt-2"></div>
-      </div>
-  </div>
-
-  <!-- Serviços -->
-  <section class="container py-4">
-      <h4 id="servicosTitulo" class="texto-tema-adaptavel text-center">Escolha os serviços desejados:</h4>
-      <div class="row justify-content-center">
-          <div class="col-md-8">
-              <div
-                id="servicos-lista"
-                class="d-flex flex-wrap gap-3 justify-content-center"
+              <h5 id="horariosTitulo" class="texto-tema-adaptavel mt-3"
+                >Horários disponíveis em <span id="dataSelecionada"></span>:</h5
               >
-                  <div class="icon-servico" data-tipo="cabelo">
-                      <input
-                        type="checkbox"
-                        class="servico-checkbox"
-                        value="Corte de Cabelo"
-                        data-preco="50.00"
-                      />
-                      Corte de Cabelo
-                      <span class="valor-servico">R$ 50,00</span>
-                  </div>
-                  <div class="icon-servico" data-tipo="coloracao">
-                      <input
-                        type="checkbox"
-                        class="servico-checkbox"
-                        value="Coloração"
-                        data-preco="120.00"
-                      />
-                      Coloração
-                      <span class="valor-servico">R$ 120,00</span>
-                  </div>
-                  <div class="icon-servico" data-tipo="barba">
-                      <input
-                        type="checkbox"
-                        class="servico-checkbox"
-                        value="Barbearia"
-                        data-preco="40.00"
-                      />
-                      Barbearia
-                      <span class="valor-servico">R$ 40,00</span>
-                  </div>
-                  <div class="icon-servico" data-tipo="maos">
-                      <input
-                        type="checkbox"
-                        class="servico-checkbox"
-                        value="Manicure"
-                        data-preco="30.00"
-                      />
-                      Manicure
-                      <span class="valor-servico">R$ 30,00</span>
-                  </div>
-                  <div class="icon-servico" data-tipo="pes">
-                      <input
-                        type="checkbox"
-                        class="servico-checkbox"
-                        value="Pedicure"
-                        data-preco="40.00"
-                      />
-                      Pedicure
-                      <span class="valor-servico">R$ 40,00</span>
+              <div class="d-flex flex-column gap-2 mt-2"></div>
+          </div>
+      </div>
+  
+      <!-- Serviços -->
+      <section class="container py-4">
+          <h4 id="servicosTitulo" class="texto-tema-adaptavel text-center">Escolha os serviços desejados:</h4>
+          <div class="row justify-content-center">
+              <div class="col-md-8">
+                  <div
+                    id="servicos-lista"
+                    class="d-flex flex-wrap gap-3 justify-content-center"
+                  >
+                      <div class="icon-servico" data-tipo="cabelo">
+                          <input
+                            type="checkbox"
+                            class="servico-checkbox"
+                            value="Corte de Cabelo"
+                            data-preco="50.00"
+                          />
+                          Corte de Cabelo
+                          <span class="valor-servico">R$ 50,00</span>
+                      </div>
+                      <div class="icon-servico" data-tipo="coloracao">
+                          <input
+                            type="checkbox"
+                            class="servico-checkbox"
+                            value="Coloração"
+                            data-preco="120.00"
+                          />
+                          Coloração
+                          <span class="valor-servico">R$ 120,00</span>
+                      </div>
+                      <div class="icon-servico" data-tipo="barba">
+                          <input
+                            type="checkbox"
+                            class="servico-checkbox"
+                            value="Barbearia"
+                            data-preco="40.00"
+                          />
+                          Barbearia
+                          <span class="valor-servico">R$ 40,00</span>
+                      </div>
+                      <div class="icon-servico" data-tipo="maos">
+                          <input
+                            type="checkbox"
+                            class="servico-checkbox"
+                            value="Manicure"
+                            data-preco="30.00"
+                          />
+                          Corte B
+                          <span class="valor-servico">R$ 30,00</span>
+                      </div>
+                      <div class="icon-servico" data-tipo="pes">
+                          <input
+                            type="checkbox"
+                            class="servico-checkbox"
+                            value="Pedicure"
+                            data-preco="40.00"
+                          />
+                          Corte A
+                          <span class="valor-servico">R$ 40,00</span>
+                      </div>
                   </div>
               </div>
           </div>
+          <!-- Comentário -->
+          <div class="mt-4">
+              <label id="comentariosLabel" for="comentarios" class="form-label texto-tema-adaptavel"
+                >Comentários ou especificações sobre o serviço:</label
+              >
+              <textarea id="comentarios" class="form-control" rows="4"></textarea>
+          </div>
+      </section>
+  
+      <!-- Valor total -->
+      <div class="container text-center mt-4 mb-4">
+          <p>
+              <strong class="texto-tema-adaptavel">Valor Total:</strong>
+              <span id="valor-total" class="texto-tema-adaptavel">R$ 0,00</span>
+          </p>
+          <button id="agendar-btn" class="btn btn-stylehub">Confirmar Agendamento</button>
       </div>
-      <!-- Comentário -->
-      <div class="mt-4">
-          <label id="comentariosLabel" for="comentarios" class="form-label texto-tema-adaptavel"
-            >Comentários ou especificações sobre o serviço:</label
-          >
-          <textarea id="comentarios" class="form-control" rows="4"></textarea>
-      </div>
-  </section>
-
-  <!-- Valor total -->
-  <div class="container text-center mt-4">
-      <p>
-          <strong class="texto-tema-adaptavel">Valor Total:</strong>
-          <span id="valor-total" class="texto-tema-adaptavel">R$ 0,00</span>
-      </p>
-      <button id="agendar-btn" class="btn btn-stylehub">Confirmar Agendamento</button>
-  </div>
+  </main>
+</div>
 
   <!-- Rodapé -->
  <div>
@@ -184,7 +188,7 @@
               <li><a href="#" class=" px-2 links">Início</a></li>
               <li><a href="#" class=" px-2 links">Serviços</a></li>
               <li><a href="#" class=" px-2 links">Contatos</a></li>
-              <li><a href="#" class=" px-2 links">Sobre</a></li>
+              <li><a href="#" class=" px-2 links">Perfil</a></li>
             </ul>
             <div class="footer-divider"></div>
             <p class="mb-0">&copy; 2025 StyleHub, Inc</p>

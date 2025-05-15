@@ -38,26 +38,20 @@
             <!-- Menu colapsável -->
             <div class="collapse navbar-collapse" id="menuNavbar">
               <div class="navbar-nav ms-auto text-center text-sm-start">
-                <div class="links">
-                  <a href="#" class="nav-link active">Início</a>
-                  <a href="#" class="nav-link">Serviços</a>
-                  <a href="#" class="nav-link">Contatos</a>
-                  <a href="#" class="nav-link">Sobre</a>
-                </div>
+                 <div class="links">
+                  <a href="/pages/pagPrincipalBarbeiro.html" class="nav-link active">Início</a>
+                  <a href="/pages/notificacoes.html" class="nav-link">Notificações</a>
+                  <a href="/pages/historicoDeCorte.html" class="nav-link">Estoque</a>
+                  <a href="/pages/pagPrincipalBarbeiro.html" class="nav-link">Agendamentos</a>
+              </div>
                 <button id="toggleThemeBtn" class="btn btn-outline-dark ms-3" title="Alternar tema">
                  <span id="themeIcon">Tema</span>
                 </button>
                 <!-- Botões de login centralizados no mobile -->
                 <div
                   class="mt-3 mt-sm-0 d-flex flex-column flex-sm-row align-items-center justify-content-center ms-sm-3"
-                  style="gap: 0.5rem"
-                >
-                  <button
-                    class="btn btn-stylehub mb-2 mb-sm-0 me-sm-2 flex-fill"
-                  >
-                    Login
-                  </button>
-                  <button class="btn btn-stylehub flex-fill">Sign-up</button>
+                  style="gap: 0.5rem">
+                  <button type="button"class="btn btn-stylehub flex-fill"onclick="window.location.href='login.html'">Sair da Conta</button>
                 </div>
               </div>
             </div>
@@ -66,103 +60,99 @@
       </header>
 
      
-  <main class="container py-4">
+  <div class="container shadow">
+    <main class="container py-4">
     
-        <div class="user-container">
-          
-          <div class="user-info-box">
-            <h6 class="mb-0 fw-bold text-center">189</h6>
-            <p class="text-muted">Serviços Concluidos</p>
+          <div class="user-container">
+    
+            <div class="user-info-box">
+              <h6 class="mb-0 fw-bold text-center">189</h6>
+              <p class="text-muted">Serviços Concluidos</p>
+            </div>
+    
+    
+            <div class="position-relative d-inline-block">
+              <i class="bi bi-person-circle" style="font-size: 130px;"></i>
+              <a href="" class="position-absolute bottom-0 end-0 translate-middle p-1 rounded-circle" style="font-size: 22px; color:white;">
+              <i class="bi bi-plus-circle-fill"></i>
+            </a>
+            </div>
+    
+            <div class="user-info-box">
+              <h6 class="mb-0 fw-bold text-center">47</h6>
+              <p class="text-muted">Serviços Cancelados</p>
+            </div>
+    
           </div>
-      
-          
-          <div class="position-relative d-inline-block">
-            <i class="bi bi-person-circle" style="font-size: 130px;"></i>   
-
-            <a href="" class="position-absolute bottom-0 end-0 translate-middle p-1 rounded-circle" style="font-size: 22px; color:white;">
-            <i class="bi bi-plus-circle-fill"></i>
-          </a>
-          </div>
-            
-          <div class="user-info-box">
-            <h6 class="mb-0 fw-bold text-center">47</h6>
-            <p class="text-muted">Serviços Cancelados</p>
-          </div>
-      
-        </div>
-      
-        <h5 class="mt-2 fw-semibold text-center">Matheus Silva</h5>
-       <br>
-  
-        <div class="bloc-funcoes">
-            <div class="item-bloc d-flex justify-content-between align-items-center py-2 border-bottom">
-                <div>
-                  <div class="d-flex align-items-center mb-1">
-                    <h6 class="title mb-0">Agendamentos Concluídos</h6>
+    
+          <h5 class="mt-2 fw-semibold text-center">Matheus Silva</h5>
+         <br>
+    
+          <div class="bloc-funcoes">
+              <div class="item-bloc d-flex justify-content-between align-items-center py-2 border-bottom">
+                  <div>
+                    <div class="d-flex align-items-center mb-1">
+                      <h6 class="title mb-0">Agendamentos Concluídos</h6>
+                    </div>
+                    <p class="mb-0">Confira seu histórico de seriços realizados</p>
                   </div>
-                  <p class="mb-0">Confira seu histórico de seriços realizados</p>
+                  <i class="bi bi-arrow-right fs-5"></i>
                 </div>
-                <i class="bi bi-arrow-right fs-5"></i>
-              </div>
-
-              <div class="item-bloc d-flex justify-content-between align-items-center py-2 border-bottom">
-                <div>
+                <div class="item-bloc d-flex justify-content-between align-items-center py-2 border-bottom">
+                  <div>
+                    <div class="d-flex align-items-center mb-1">
+                      <h6 class="title mb-0">Agendamentos em andamento</h6>
+                      </div>
+                      <p class="mb-0">Confira seus agendamentos marcados</p>
+                  </div>
+                  <i class="bi bi-arrow-right fs-5"></i>
+                </div>
+                <div class="item-bloc d-flex justify-content-between align-items-center py-2 border-bottom">
+                  <div>
+                    <div class="d-flex align-items-center mb-1">
+                      <h6 class="title mb-0">Meu Estoque</h6>
+                      </div>
+                      <p class="mb-0">Gerencie os itens do seu estoque</p>
+                  </div>
+                  <i class="bi bi-arrow-right fs-5"></i>
+                </div>
+                   <div class="item-bloc d-flex justify-content-between align-items-center py-2 border-bottom">
+                  <div>
+                    <div class="d-flex align-items-center mb-1">
+                      <h6 class="title mb-0">Minhas Despesas</h6>
+                      </div>
+                      <p class="mb-0">Gerencie as despesas da sua barbearia</p>
+                  </div>
+                  <i class="bi bi-arrow-right fs-5"></i>
+                </div>
+                <div class="item-bloc d-flex justify-content-between align-items-center py-2 border-bottom">
+                  <div>
+                    <div class="d-flex align-items-center mb-1">
+                      <h6 class="title mb-0">Sair do app</h6>
+                      </div>
+                      <p class="mb-0">Fazer log out do aplicativo</p>
+                  </div>
+                  <i class="bi bi-arrow-right fs-5"></i>
+                </div>
+          </div>
+          <div class="bloc-funcoes mt-4">
+              <div class="item-bloc border-bottom">
                   <div class="d-flex align-items-center mb-1">
-                    <h6 class="title mb-0">Agendamentos em andamento</h6>
-                    </div>
-                    <p class="mb-0">Confira seus agendamentos marcados</p>
-                </div>
-                <i class="bi bi-arrow-right fs-5"></i>
+                  <h6 class="title">Política de privacidade</h6>
+                  </div>
+                  <p class="text-sm-start">Leia nossas políticas e termos de uso do App</p>
               </div>
-
-              <div class="item-bloc d-flex justify-content-between align-items-center py-2 border-bottom">
-                <div>
+    
+              <div class="item-bloc py-2 border-bottom">
                   <div class="d-flex align-items-center mb-1">
-                    <h6 class="title mb-0">Meu Estoque</h6>
-                    </div>
-                    <p class="mb-0">Gerencie os itens do seu estoque</p>
-                </div>
-                <i class="bi bi-arrow-right fs-5"></i>
+                  <h6 class="title">Versão do App e notas</h6>
+                  </div>
+                  <p class="text-sm-start" >Confira a versão do aplicativo e notas técnicas</p>
               </div>
-                 <div class="item-bloc d-flex justify-content-between align-items-center py-2 border-bottom">
-                <div>
-                  <div class="d-flex align-items-center mb-1">
-                    <h6 class="title mb-0">Minhas Despesas</h6>
-                    </div>
-                    <p class="mb-0">Gerencie as despesas da sua barbearia</p>
-                </div>
-                <i class="bi bi-arrow-right fs-5"></i>
-              </div>
-              <div class="item-bloc d-flex justify-content-between align-items-center py-2 border-bottom">
-                <div>
-                  <div class="d-flex align-items-center mb-1">
-                    <h6 class="title mb-0">Sair do app</h6>
-                    </div>
-                    <p class="mb-0">Fazer log out do aplicativo</p>
-                </div>
-                <i class="bi bi-arrow-right fs-5"></i>
-              </div>
-        </div>
-
-        <div class="bloc-funcoes mt-4">
-            <div class="item-bloc border-bottom">
-                <div class="d-flex align-items-center mb-1">
-                <h6 class="title">Política de privacidade</h6>
-                </div>
-                <p class="text-sm-start">Leia nossas políticas e termos de uso do App</p>
-            </div>
-        
-
-            <div class="item-bloc py-2 border-bottom">
-                <div class="d-flex align-items-center mb-1">
-                <h6 class="title">Versão do App e notas</h6>
-                </div>
-                <p class="text-sm-start" >Confira a versão do aplicativo e notas técnicas</p>
-            </div>
-        
-        </div>    
-
-    </main>
+    
+          </div>
+      </main>
+  </div>
 
   
 
