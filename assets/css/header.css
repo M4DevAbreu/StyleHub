@@ -45,9 +45,6 @@
 
 /* Flexbox: no mobile, os botões ocupam a largura total */
 @media (max-width: 575px) {
-  .d-flex {
-    flex-direction: column !important; /* Empilha os botões no mobile */
-  }
   .btn-stylehub {
     width: 100% !important; /* Botões ocupam 100% da largura no mobile */
   }
@@ -55,20 +52,14 @@
 
 /* No desktop, os botões ficam lado a lado */
 @media (min-width: 576px) {
-  .d-flex {
-    flex-direction: row !important; /* Botões ao lado no desktop */
-  }
   .btn-stylehub {
     width: auto !important; /* Largura ajustada automaticamente no desktop */
   }
-  a {
+  .li > a {
     margin-right: 2rem;
   }
 
-  a{
-    margin-right: 2rem;
-
-  }
+  
 }
 
 /* No mobile, diminui o espaço vertical entre os itens do menu */
