@@ -1,6 +1,24 @@
-
-.valor-pago{
+.valor-pago {
     font-size: 15px;
-
-
-}
+  }
+  
+ 
+  @media (min-width: 768px) {
+    .card-body {
+      padding: 1rem;
+    }
+  
+    .bg-dark {
+      width: 90px !important;
+      font-size: 14px;
+      padding: 0.5rem 0;
+    }
+  
+    .rounded-circle img {
+      width: 30px;
+    }
+  
+    .valor-pago {
+      font-size: 13px;
+    }
+  }
