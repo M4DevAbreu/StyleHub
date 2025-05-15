@@ -50,26 +50,6 @@ main {
   margin: 2rem 0;
 }
 
-/* Tema escuro */
-[data-bs-theme="dark"] .footer {
-  background-color: #0c0c0c;
-  color: white;
-}
-
-[data-bs-theme="dark"] .footer a {
-  color: white !important;
-}
-
-/* Tema claro */
-[data-bs-theme="light"] .footer {
-  background-color: #f8f9fa;
-  color: #000;
-}
-
-[data-bs-theme="light"] .footer a {
-  color: #000 !important;
-}
-
 /* Responsivo */
 @media (max-width: 600px) {
   .lista {
